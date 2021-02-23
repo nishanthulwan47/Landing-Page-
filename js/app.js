@@ -15,9 +15,10 @@
 
 /**
  * Define Global Variables
- * 
+ *  
 */
-
+    const navbarList = document.getElementById("#navbar_list");
+    const sections = document.getElementsByTagName("section");
 
 /**
  * End Global Variables
@@ -25,6 +26,7 @@
  * 
 */
 
+    
 
 
 /**
@@ -35,6 +37,24 @@
 
 // build the nav
 
+function buildNav() {
+
+    for (section of sections) {
+        // create the <li> element
+        let navItem = document.createElement('li');
+        //create the <a> element
+        let navItemLink = document.createElement('a');
+        navItemLink.className = 'menu__link';
+        //use the section data-nav to set the navItem title
+        navItemLink.textContent = section.dataset.nav;
+        //append the link to the navItem
+        navItem.appendChild(navItemLink);
+        //append the link to navbar
+        navbarList.appendChild(navItem);
+    };
+};
+
+buildNav();
 
 // Add class 'active' to section when near top of viewport
 
