@@ -110,7 +110,7 @@ function scroll(e) {
     });
 
     
-
+    buildNav();
 /**
  * End Main Functions
  * Begin Events
