@@ -28,24 +28,22 @@
     //Determine if an element is in viewport
 
     //Helper functions
-    function isInViewport(element) {
-
-        const viewport = element.getBoundingClientRect();
-        return (
-            viewport.top >= 0 &&
-            viewport.left >= 0 &&
-            viewport.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            viewport.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-            
-        
-    };
+   
 
     // var h1 = document.querySelector('h1');
     // var bounding = h1.getBoundingClientRect();
 
     // console.log(bounding);
     
+    function Viewport (element) {
+        const distance = element.getBoundingClientRect();
+        return (
+            distance.top >= 0 &&
+            distance.left >= 0 &&
+            distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    };
 
 
 /**
@@ -74,6 +72,7 @@ function buildNav() {
         //append the link to navbar
         navbarList.appendChild(navItem);
 
+
         
     };
 };
@@ -82,23 +81,35 @@ function buildNav() {
 
 // Add class 'active' to section when near top of viewport
 
-function classActive() {
-    for (section of sections) {
-        if (isInViewport(section)) {
-            console.log('In the viewport!');
-            section.classList.add("your-active-class");
-        } else {
-            section.classList.remove("your-active-class");
-            console.log('Not in viewport.. whomp whomp');
-        }
-    }
-};
 
 
-buildNav();
+
+
 
 // Scroll to anchor ID using scrollTO event
 
+function scroll(e) {
+    e.preventDefault()
+
+    const clicked = document.querySelector('#' + e.target.dataset["section"]);
+
+    clicked.scrollIntoView({
+        block: "start",
+        alignToTop: true,
+        behavior: "smooth"
+    });
+}
+
+    const highlights = document.querySelector("li");
+    highlights.forEach((element) => {
+        if (element.childNodes[0].dataset === e.target.dataset && Viewport) {
+            element.classList.add("link__active");
+        } else {
+            element.classList.remove("link__remove");
+        }
+    });
+
+    buildNav();
 
 /**
  * End Main Functions

@@ -40,6 +40,13 @@ h2 {
     color: #fff;
 }
 
+#navbar_list {
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
 p {
     line-height: 1.6em;
     color: #eee;
