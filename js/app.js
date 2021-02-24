@@ -71,8 +71,8 @@ function buildNav() {
         navItem.appendChild(navItemLink);
         //append the link to navbar
         navbarList.appendChild(navItem);
-
-
+        //append event listener
+        navItem.addEventListener("click", scroll);
         
     };
 };
@@ -81,8 +81,16 @@ function buildNav() {
 
 // Add class 'active' to section when near top of viewport
 
+function active() {
+    for (section of sections) {
+        if (Viewport(section)) {
+            section.classList.add("your-active-class");
+        } else {
+            section.classList.remove("your-active-class");
+        }
+    }
+}
 
-buildNav();
 
 
 
@@ -98,17 +106,17 @@ function scroll(e) {
         alignToTop: true,
         behavior: "smooth"
     });
-}
 
-    const highlights = document.querySelector("li");
-    highlights.forEach((element) => {
-        if (element.childNodes[0].dataset === e.target.dataset && Viewport) {
-            element.classList.add("link__active");
+
+    const highlight = document.querySelector("li");
+    highlight.forEach((elem) => {
+        if (elem.childNodes[0].dataset === e.target.dataset && Viewport) {
+            elem.classList.add("link__active");
         } else {
-            element.classList.remove("link__remove");
+            elem.classList.remove("link__remove");
         }
     });
-
+}
     
     buildNav();
 /**
@@ -120,6 +128,9 @@ function scroll(e) {
 // Build menu 
 
 // Scroll to section on link click
+document.addEventListener('scroll', function() {
+    active();
+});
 
 // Set sections as active
 
