@@ -82,7 +82,7 @@ function buildNav() {
 // Add class 'active' to section when near top of viewport
 
 
-
+buildNav();
 
 
 
@@ -109,7 +109,7 @@ function scroll(e) {
         }
     });
 
-    buildNav();
+    
 
 /**
  * End Main Functions
