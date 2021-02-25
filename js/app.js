@@ -38,8 +38,8 @@
     function Viewport (element) {
         const distance = element.getBoundingClientRect();
         return (
-            distance.top >= 0 &&
-            distance.left >= 0 &&
+            distance.top >= -300 &&
+            distance.left >= 300 &&
             distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
             distance.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
