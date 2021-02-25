@@ -2,7 +2,7 @@
 
 ## Lessons Learned
 
-(1) How to dynamically create navigation menu
+(1) How to dynamically create navigation menu </br>
 (2) How to use Scroll function and event listeners
 
 ## Languages Used
