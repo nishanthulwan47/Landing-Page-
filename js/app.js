@@ -38,8 +38,8 @@
     function Viewport (element) {
         const distance = element.getBoundingClientRect();
         return (
-            distance.top >= -300 &&
-            distance.left >= 300 &&
+            distance.top >= 300 &&
+            distance.left >= -300 &&
             distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
             distance.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
@@ -108,8 +108,8 @@ function scroll(e) {
     });
 
 
-    const highlights = document.querySelector("li");
-    highlights.forEach((elem) => {
+    const highlight = document.querySelector("li");
+    highlight.forEach((elem) => {
         if (elem.childNodes[0].dataset === e.target.dataset && Viewport) {
             elem.classList.add("link__active");
         } else {
