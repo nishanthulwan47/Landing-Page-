@@ -108,7 +108,7 @@ function scroll(e) {
     });
 
 
-    const highlight = document.querySelector("li");
+    const highlight = document.querySelectorAll("li");
     highlight.forEach((elem) => {
         if (elem.childNodes[0].dataset === e.target.dataset && Viewport) {
             elem.classList.add("link__active");
