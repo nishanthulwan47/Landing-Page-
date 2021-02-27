@@ -1,13 +1,7 @@
 # Landing Page Project
 
-## Lessons Learned
+This project is about building a multi-section landing page, with a dynamically updating navigational menu based on the amount of contetn that is added to the page. Technologies that were used in this project were HTML,CSS and JavaScript. 
 
-* How to dynamically create navigation menu </br>
-* How to use Scroll function and event listeners
+## Section 1
 
-## Languages Used
-
-* HTML </br>
-* CSS  </br>
-* JavaScript
-
+![alt text](https://github.com/[nishanthulwan47]/[Landing-Page-]/blob/[main]/section1.png?raw=true)

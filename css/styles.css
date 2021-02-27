@@ -45,6 +45,14 @@ h2 {
     justify-content: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
+    cursor: pointer;
+}
+
+.link__active {
+    background: #fff;
+    color: #fff;
+    transition: ease 0.3s all;
+
 }
 
 p {
