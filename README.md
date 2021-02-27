@@ -4,4 +4,4 @@ This project is about building a multi-section landing page, with a dynamically 
 
 ## Section 1
 
-https://github.com/[nishanthulwan47]/[Landing-Page-]/blob/[main]/section1.png?raw=true
+![alt text](http:///Users/nishanthulwan/Desktop/landing-page/images/section1.png)
